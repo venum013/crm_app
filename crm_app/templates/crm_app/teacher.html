@@ -1,0 +1,14 @@
+<a href="/#">Home</a>
+<h2>Teachers</h2>
+{% for teacher in teachers %}
+    <li>
+        {{teacher.fist_name}}
+        {{teacher.last_name}}
+        {{teacher.speciality}}
+        <a href="{% url "delete_teacher" teacher.id %}">Delete<a>
+        <a href="{% url "update_teacher" teacher.id %}">Update<a>
+    </li>
+
+
+{% endfor %}
+<a href=" {% url 'add_teacher'%}">Add teacher</a>

@@ -1,0 +1,12 @@
+
+
+<h1>Add Student</h1>
+
+<form method="post" action="{% url 'add_student'%}"  enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit">Submit</button>
+</form>
+
+
+

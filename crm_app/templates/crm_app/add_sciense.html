@@ -1,0 +1,6 @@
+<h1>Add Sciense</h1>
+<form method="post" action="{% url "add_science" %}" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form}}
+    <button type="submit">Send</button>
+ </form>

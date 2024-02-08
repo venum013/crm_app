@@ -1,0 +1,8 @@
+<a href="/#">Home</a>
+<h2>Sciences</h2>
+{% for science  in sciences %}
+    <li>{{science.name}} {{science.teacher}} {{science.cost}} <br>
+    <a href="{% url "delete_science" science.id %}">Delete<a>
+    <a href="{% url "update_science" science.id %}">Update<a></li>
+{% endfor %}<br>
+<a href="/add_science">Add a new science</a>
